@@ -77,7 +77,7 @@ export default class Event extends Component {
     console.log(body);
     axios({
       method: 'post',
-      url: 'http://localhost:8762/event/v1/create',
+      url: 'http://zuulserver-s2-travelsystem.apps.na311.openshift.opentlc.com/event/v1/create',
       data: body1,
       headers: {
         'Content-Type': 'application/json',
