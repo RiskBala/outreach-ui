@@ -32,7 +32,7 @@ export default class Login extends Component {
     event.preventDefault();
     axios({
       method: 'post',
-      url: 'http://localhost:8762/oauth/token',
+      url: 'http://zuulserver-s2-travelsystem.apps.na311.openshift.opentlc.com/oauth/token',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
         'Authorization': 'Basic '+btoa("client:secret")
