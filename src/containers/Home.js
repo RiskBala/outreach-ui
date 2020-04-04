@@ -25,7 +25,7 @@ export default class Home extends Component {
         console.log('cheintgsdfd');
         axios({
             method: 'get',
-            url: 'http://localhost:8766/events/eventStatus',
+            url: 'http://eventdetail-s2-travelsystem.apps.na311.openshift.opentlc.com/events/eventStatus',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + this.state.authtoken,
@@ -48,7 +48,7 @@ export default class Home extends Component {
     handleClick = (eventId)=>{
      axios({
       method: 'post',
-      url: 'http://localhost:8766/registration/v1/'+eventId,
+      url: 'http://eventdetail-s2-travelsystem.apps.na311.openshift.opentlc.com/registration/v1/'+eventId,
       headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + this.state.authtoken,
