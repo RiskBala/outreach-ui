@@ -48,7 +48,7 @@ export default class Home extends Component {
     handleClick = (eventId)=>{
      axios({
       method: 'post',
-      url: 'http://zuulserver-s2-travelsystem.apps.na311.openshift.opentlc.com/registration/v1/'+eventId,
+      url: 'http://eventdetail-s2-travelsystem.apps.na311.openshift.opentlc.com/registration/v1/'+eventId,
       headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + this.state.authtoken,
