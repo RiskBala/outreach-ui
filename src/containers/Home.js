@@ -25,10 +25,12 @@ export default class Home extends Component {
         console.log('cheintgsdfd');
         axios({
             method: 'get',
-            url: 'http://zuulserver-s2-travelsystem.apps.na311.openshift.opentlc.com/events/eventStatus',
+            url: 'http://eventdetail-s2-travelsystem.apps.na311.openshift.opentlc.com/events/eventStatus',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + this.state.authtoken,
+                'userId': this.state.username,
+                'roles':this.state.userRole,
             }
         }).then(response => response.data)
             .then((data) => {
