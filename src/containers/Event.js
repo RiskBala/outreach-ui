@@ -81,7 +81,9 @@ export default class Event extends Component {
       data: body1,
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + this.state.authtoken
+        'Authorization': 'Bearer ' + this.state.authtoken,
+        'userId': this.state.username,
+        'roles':this.state.userRole,
       }
     }).then(response => response.data)
       .then((data) => {
