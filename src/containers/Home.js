@@ -29,8 +29,6 @@ export default class Home extends Component {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + this.state.authtoken,
-                'userId': this.state.username,
-                'roles':this.state.userRole,
             }
         }).then(response => response.data)
             .then((data) => {
